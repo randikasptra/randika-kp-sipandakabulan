@@ -24,6 +24,11 @@ class CreateUsers extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
+            'email' => [
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+                'unique' => true,
+            ],
             'role' => [
                 'type'       => 'ENUM',
                 'constraint' => ['admin', 'kecamatan', 'kelurahan'],
